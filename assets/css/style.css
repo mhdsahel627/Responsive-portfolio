@@ -12232,3 +12232,14 @@ pre .code {
 .section-lg {
   padding: 100px 0 !important;
 }
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+.success-message {
+  color: green;
+  font-size: 1rem;
+  display: none;
+  margin-top: 10px;
+}
+
