@@ -347,22 +347,33 @@
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
             <!-- contact form -->
-            <form  action="https://api.web3forms.com/submit" autocomplete="on" method="POST" class="contact-form col-md-10 col-lg-8 m-auto">
-                <div class="form-row">
+            <form action="https://formsubmit.co/sahelmhd3@gmail.com" method="POST" id="contactForm">
+                <div class="form-row con-form">
                     <div class="form-group col-sm-6">
-                        <input type="hidden" name="access_key" value="1e533733-6cd9-463c-bb7c-2ed17ac0be9d">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                        
+                        <input type="text" size="50" class="form-control" id="full-name" pattern="[A-Za-z ]+" name="username" placeholder="Your Name" title="only alphabets required" required>
+                        <div class="error-message" id="nameError"></div>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email" requried>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.(com|net|org|in|edu)$" required>
+                        <div class="error-message" id="emailError"></div>
                     </div>
+                    <div class="col-sm-12 mb-3">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" class="form-control">
+                        <div class="error-message" id="subjectError"></div>
+                      </div>
                     <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6" class="form-control"
+                        <textarea name="comment" id="message" rows="6" class="form-control"
                             placeholder="Write Something"></textarea>
+                        <div class="error-message" id="messageError"></div>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                        <button type="submit" id="submitBtn" class="btn btn-outline-success rounded-pill">Send Message</button>
+                        <!-- <input type="submit" value="Send Message" class="btn btn-outline-success rounded-pill"> -->
                     </div>
+                    <div class="col-md-12">
+                        <div class="success-message" id="successMessage">Form submitted successfully!</div>
+                      </div>
                 </div>
             </form>
             <!-- end of contact form -->
